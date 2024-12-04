@@ -1,0 +1,570 @@
+---
+title: "Chap 2: Money in the Utility Function"
+author: "Tedy Herlambang"
+subtitle: ""
+footer: ub.ac.id
+logo: images/logo-ub-bottom.png
+editor: source
+bibliography: miu.bib
+execute:
+  eval: true
+  echo: true
+  warning: true
+  error: true   
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    code-copy: hover
+    code-overflow: scroll
+    multiplex: false
+    embed-resources: false
+    controls: auto
+    progress: true
+    history: true
+    hash-type: number    
+    slide-number: c/t
+    show-slide-number: print  
+    menu:
+      side: right
+      width: normal
+      numbers: true
+    chalkboard:
+      theme: chalkboard
+      # src: drawings.json
+      read-only: false
+title-slide-attributes:
+  # data-background-image: images/logo-ub1.png
+  data-background-opacity: "0.5"
+  data-background-size: 15%
+  data-background-position: 2% 2%
+  # data-background-image: grid-worms/bird.webp
+  # background-iframe: grid-worms/index.html
+preload-iframes: true
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+# General R options
+set.seed(111)               # in case we use randomized procedures       
+options(scipen = 999)       # positive values bias towards fixed and negative towards scientific notation
+options(repos = 
+  c(getOption("repos")["CRAN"],
+  CRANextra = "https://mirror.clientvps.com/CRAN/")
+) # use CRAN as default, set CRANextra to Nürnberg mirror
+
+# Load packages
+if (!require("pacman")) install.packages("pacman", dependencies = TRUE)
+packages <- c(
+  "papaja",
+  "here", "fs",
+  "conflicted",
+  "rio",
+  "tidyverse", 
+  "psych",          
+  "rstatix", "ggstatsplot",
+  "ggplot2", "ggpubr", "scales",
+  "report",
+  # , ...
+  "plotly", "crosstalk", "DT",
+  # for examples:
+  "htmltools",
+  "palmerpenguins",
+  "d3scatter"
+)
+pacman::p_load(char = packages)
+
+# Set here to Rnotebook directory
+here::set_here()
+unloadNamespace("here")                   # need new R session or unload namespace for .here file to take precedence over .Rproj
+notebook_name <- fs::path_file(here::here())
+
+# Solve conflicts in favor of tidyverse
+conflicted::conflict_prefer("filter", winner = "dplyr")
+conflicted::conflict_prefer("select", winner = "dplyr")
+conflicted::conflict_prefer("slice", winner = "dplyr")
+conflicted::conflict_prefer("rename", winner = "dplyr")
+conflicted::conflict_prefer("count", winner = "dplyr")
+
+# Themes for ggplot2 plotting (here used APA style)
+theme_set(papaja::theme_apa())
+```
+## 2.1 Introduction 
+
+- To introduce a monetary policy instrument into "real economic" model
+- The neoclassical growth model by @ramseyMathematicalTheorySaving1928 and @solowContributionTheoryEconomic1956 provides the basic framework for modern macroeconomics.
+- But these are models of nonmonetary economies.
+- @sidrauskiRationalChoicePatterns1967 introduced money into the neoclassical growth model. At this time money was considered the monetary policy instrument.
+
+## How can we introduce money? {.scrollable}
+
+- Money provides some service to the economy and that the benefits of that service can be expressed in the utility function -- money yields utility (MIU)
+- Agents' utility depends directly on their consumption of goods and their holdings of money: 
+  + Reduce the time and energy spent making transactions
+  + Provide insurance against certain individual or economy-wide shocks
+  + Might permit transactions with unknown individuals
+- Thus in this model we assume we can approximate them in the utility function
+
+## 2.2 The Basic MIU Model 
+
+- Suppose the utility function of the representative household is:
+
+$$
+U=u(c_t,z_t),
+$$
+
+- where $z_t$ is the flow of services yielded by money holdings and $c_t$ is time t per capita consumption. 
+- uncertainty and any labor-leisure choice are ignored
+
+## What constitutes $z_t$?
+
+- z should be related to something like the number of dollars, M, times their price, $1/P$, in terms of goods: $M (1/P) = M/P$. 
+- If the service flow is proportional to the real value of the stock of money and $N_t$ is the population, then z can be set equal to real per capita money holdings: 
+$$
+z_t= \frac {M_t} {{P_t}{N_t}} \equiv m_t
+$$
+
+## Critics on utility function
+
+- Money itself is intrinsically useless (e.g., paper currency) 
+- It is only through its use in facilitating transactions that it yields valued services (chapter 3)
+- Models in which money helps to reduce the time needed to purchase consumption goods can be
+represented by the MIU approach
+
+## The Basic MIU Model (cont'd)
+
+- The representative household seeks to maximize lifetime utility by choosing time paths for consumption and real money balances subject to budget constraints 
+$$
+W = \sum_{t = 1}^{\infty} \beta^t U_t = \sum_{t = 1}^{\infty} \beta^t u(c_t,m_t) \tag{2.1}
+$$
+where 0 < $\beta$ < 1 is a subjective rate of discount
+
+- Equation (2.1) implies a much stronger notion of the utility provided by holding money 
+than simply that the household would prefer having more money to less money.
+
+## Budget Constraint {.scrollable}
+
+- Assume that households can hold money, bonds that pay a nominal interest rate $i_t$ and physical capital. 
+- Physical capital produces output according to a standard neoclassical production function.
+- Given its current income, its assets, and any net transfers received from the government ( $\tau_t$), the household allocates its resources among consumption, gross investment in physical capital, and gross accumulation of real money balances and bonds. 
+
+## Budget Constraint {.smaller}
+
+- If the rate of depreciation of physical capital is $\delta$, the aggregate economy wide budget constraint of the household sector takes the form 2.2
+
+$$
+\begin{multline*}
+Y_t + \tau_t N_t+(1-\delta)K_{t-1}+ \frac {{(1+i_{t-1}) B_{t-1}}} {{P_t}}+ \frac {{M_{t-1}}} {P_t} \\
+= C_t+K_t+ \frac {M_t}{P_t} + \frac {B_t}{P_t} \tag{2.2}
+\end{multline*}
+$$
+
+- where $Y_t$ is aggregate output, $K{t-1}$ is the aggregate stock of capital at the start of period t, and $\tau_t N_t$ is the aggregate real value of any lump-sum transfers or taxes. 
+
+
+## Aggregate production function {.smaller}
+
+- The aggregate production function relates output $Y_t$ to the available capital stock $K_{t-1}$ and employment $N_t$: $Y_t = F(K_{1-t},N_t)$
+- Assuming this production function is linear homogeneous with constant returns to scale, output per capita $y_t$ is a function of the per capita capital stock $k_{t-1}$ 
+
+$$
+y_t=f ({\frac {k_{t-1}} {1+n}}), \tag{2.3}
+$$
+
+- where n is the population growth rate (assumed to be constant).
+- Note that output is produced in period $t$ using capital carried over from period $t - 1$. 
+
+## The percapita version
+
+- Dividing both sides of the budget constraint (2.2) by population $N_t$, the per capita version becomes 2.4
+
+$$
+\begin{align*}
+& \omega_t \equiv f ({\frac {k_{t-1}} {1+n}}) + \tau_t + ({\frac {1 - \delta} {1+n}}) k_{t-1}+ {{(1 + i_{t-1})b_{t-1}+ m_{t-1}} \over {(1+\pi_t)}{(1+n)}} \\
+& = c_t+k_t+m_t+b_t \tag{2.4}
+\end{align*}
+$$
+
+- where $\pi_t$ is the rate of inﬂation, $b_t = B_t/P_tN_t$, and $m_t=M_t/P_tN_t$
+
+## Dynamic optimization {.smaller}
+
+- The household’s problem is to choose paths for $c_t, k_t, b_t,$ and $m_t$ to maximize (2.1) subject to (2.4)
+- The state variable for the problem is the household's initial level of resources $\omega_1$, and the value function is defined by 2.5
+
+$$
+V_{(\omega_t)}= max \{u(c_t,m_t)+\beta V(\omega_{t+1})\},  \tag{2.5}
+$$
+- where the maximization is subject to the budget constraint (2.4) and
+
+
+$$
+\omega_{t+1} \equiv f ({\frac {k_{t}} {1+n}}) + \tau_{t+1} + ({\frac {1 - \delta} {1+n}}) k_{t}+ {{(1 + i_{t-1})b_{t}+ m_{t}} \over {(1+\pi_{t+1})}{(1+n)}} 
+$$
+
+
+## FOC (1)
+
+- Using (2.4) to express $k_t$ as $\omega_t - c_t - m_t - b_t$ and making use of the definition of $\omega_{t+1}$, (2.5) can be written as 
+
+
+
+$$
+\begin{align*}
+& V_{(\omega_t)}= max \{u(c_t,m_t)
++\beta V(f \frac {({\omega_t - c_t - m_t - b_t}} {1+n}) + \tau_{t+1} \\
+& + ({{\frac {1 - \delta} {1+n}}})({\omega_t - c_t - m_t - b_t) 
++ {{(1 + i_{t})b_{t}+ m_{t}} \over {(1+\pi_{t+1})}{(1+n)}}}  \} 
+\end{align*}
+$$
+
+## FOC (2) {.smaller}
+
+The first order necessary conditions for this problem are
+
+$$
+\begin{align*}
+u_c(c_t,m_t)- \frac {\beta}{1+n}[f_k(\frac {k_t}{1+n}) + 1-\delta] V_{\omega}(\omega_{1+1})=0 \tag{2.6}
+\end{align*}
+$$
+$$
+\begin{align*}
+\frac {1+i_t} {(1+\pi_{1+t}) (1+n)} - \frac {1}{1+n}[f_k(\frac {k_t}{1+n}) + 1-\delta]=0 \tag{2.7}
+\end{align*}
+$$
+$$
+\begin{align*}
+u_c(c_t,m_t)- \frac {\beta}{1+n}[f_k(\frac {k_t}{1+n}) + 1-\delta - \frac {1}{1+\pi_{t+1}}] V_{\omega}(\omega_{1+1})=0 \tag{2.8}
+\end{align*}
+$$
+
+## The transversality conditions
+
+$$
+\lim_{t\to\infty} \beta^t \lambda_t x_t =0, for\ x = k,b,m \tag{2.9}
+$$
+
+- where $\lambda_t$ is the marginal utility of period t consumption.
+
+## The envelope theorem
+
+- The envelope theorem implies that
+
+$$
+V_\omega (\omega_t) = \frac {\beta}{1+n}[f_k(\frac {k_t}{1+n}) + 1-\delta] - \frac {1}{1+\pi_{t+1}}] V_{\omega}(\omega_{1+1}), 
+$$
+
+- which together with (2.6) yields
+
+$$
+\lambda_t \equiv u_c(c_t, m_t)= V_\omega (\omega_t) \tag{2.10}
+$$
+
+## The FOC interpretations
+
+- Using (2.6) and (2.10), (2.8) can be written as 
+
+
+$$
+u_m(c_t,m_t)+ \frac {{\beta u_c} (c_{t+1},m_{t+1})} {{(1+\pi_{t+1})(1+n)}} = u_c(c_t,m_t) \tag{2.11}
+$$
+
+## The FOC interpretations
+
+- From (2.6), (2.7), and (2.11), 
+
+
+$$
+\begin{align*}
+\frac {{u_m} (c_t.m_t)} {{u_c}(c_t.m_t)} & = 1- [ \frac {\beta}{{(1+r_t)(1+\pi_{t+1})} }] \frac {{u_c}(c_{t+1}, m_{t+1})} {{{u_c}(c_{t}, m_{t})}} \\
+& = 1- \frac {{1}} {{(1+r_t)} (1+\pi_{t+1})} \\
+& = \frac {{i_t}} {{(1+i_t)}} \equiv \Upsilon_t \tag{2.12}
+\end{align*}
+$$
+
+## The Fisher relationship {.smaller}
+
+- Equation (2.12) also makes use of (2.7), which links the nominal return on bonds, inﬂation, and the real return on capital. This latter equation can be written as
+$$
+1+i_t = [f_k(\frac {{k_t}} {{1+n}}) + 1 - \delta] (1+\pi_{t+1}) = (1+r_t)(1+\pi_{t+1}) \tag{2.13}
+$$
+
+- It expresses the gross nominal rate of interest as equal to the gross real return on capital times 1 plus the expected rate of inﬂation.
+
+- If one notes that $(1 + x)(1 + y) \approx  1 + x + y$ when x and y are small, so (2.13) is often written as 
+
+$$
+i_t= r_t+ \pi_{t+1}
+$$
+
+
+## 2.2.1 Steady-State Equilibrium
+
+- Consider the properties of this economy when it is in a steady-state equilibrium with
+n = 0 and the nominal supply of money growing at the rate $\theta$. 
+- Superscript ss denote values evaluated at the steady state. 
+- The steady-state, constant values of consumption, the capital stock, real money balances, inﬂation, and the nominal interest rate must satisfy the ﬁrst-order necessary conditions for the household’s decision problem given by (2.6)–(2.8), the economywide budget constraint, and the speciﬁcation of the exogenous growth rate of M.
+
+## Steady-State Equilibrium
+
+- Using (2.10) to eliminate $V_\omega (\omega^{ss})$, the equilibrium conditions:
+
+$$
+u_c(c^{ss},m^{ss}) - \beta[f_k(k^{ss})+1-\delta] u_c(c^{ss},m^{ss})=0, \tag{2.14}
+$$
+
+$$
+\frac {{1+i^{ss}}} {{1+\theta}} - [f_k (k^{ss}) + 1 - \delta] = 0, \tag{2.15}
+$$
+
+## Steady-State Equilibrium {.smaller}
+
+
+$$
+u_m(c^{SS},m^{SS} - \beta [f_k(k^{ss}) + 1-\delta] u_c{(c^{ss}, m^{ss})} + \frac {{\beta u_c}(c^{ss},m^{ss})} {{1+\theta}} =0,  \tag{2.16}
+$$ 
+
+$$
+f(k^{ss}) - \tau^{ss} + (1-\delta)k^{ss} + \frac {{m^{ss}}} {{1+\theta}} = c^{ss}+k^{ss}+m^{ss}, \tag{2.17}
+$$
+
+- where $\omega^{ss}=f(k^{ss})+\tau^{ss}+(1-\delta)k^{ss}+ \frac {m^{ss}} {{(1+\pi)}}$.
+
+## The real return on capital
+
+- net of depreciation is $r_{ss} \equiv f_k(k_{ss}) - \delta$, so (2.15) can be written as
+
+$$
+1+i^{ss}=(1+r^{ss})(1+\theta) = (1+r^{ss})(1+\pi^{ss}) \tag{2.18}
+$$
+
+## The neutrality of money
+
+- Notice that in (2.14)–(2.17) money appears only in the form of real money balances. 
+- Thus, any change in the nominal quantity of money that is matched by a proportional change in the price level, leaving $m^{ss}$ unchanged, has no effect on the economy’s real equilibrium. 
+- If prices do not adjust immediately in response to a change in M, then a model might display non-neutrality with respect to changes in M in the short run but still exhibit monetary neutrality in the long run, once all prices have adjusted.
+
+## The steady-state capital-labor ratio {.smaller}
+
+- Dividing (2.14) by $u_c(c^{ss}, m^{ss})$ yields $1-\beta [f_k(k^{ss})+1-\delta]=0$ or
+
+$$
+f_k(k^{ss}) = \frac {1}{\beta} - 1 + \delta, \tag{2.19}
+$$
+- This equation deﬁnes the steady-state capital-labor ratio $k^{ss}$ as a function of $\beta$ and $\delta$.
+
+- If the production function is Cobb-Douglass, $f(k)= k^\alpha$ for $0<\alpha<1$, then $f_k(k) = \alpha k^{\alpha-1}$ and
+
+$$
+k^{ss}=[\frac {{\alpha \beta}} {{1+\beta(\delta-1)}}]^{\frac {1}{1-\alpha}}, \tag{2.20}
+$$
+
+## The economy’s resource constraint
+
+- Because changes in the nominal quantity of money are engineered in this model
+by making lump-sum transfers to the public, the real value of these transfers must
+equal ${M-M_{t-1} }/ {P_t}={\theta m_{t-1}}/{P_t}={\theta m_{t-1}}/{(1+\pi_t)}$
+
+$$
+c^{ss}=f(k^{ss}) - \delta k^{ss}, \tag{2.21}
+$$
+
+
+## Superneutrality 
+
+- To understand why superneutrality holds, note from (2.10), $u_c=V_{\omega}(\omega_t)$, so using (2.6), 
+
+
+$$
+u_c(c_t, m_t) = \beta[f_k(k_t) + 1-\delta] u_c(c_{t+1}, m_{t+1}), \ or
+$$
+
+$$
+\frac {{u_c} (c_{t+1}, m_{t+1})} {{u_c} (c_t,m_t)} = \frac {{1/\beta}} {{f_k}(k_t) +1-\delta}. \tag{2.22}
+$$
+
+
+## Existence of Steady State
+
+- When $u_c(c,m)=v(c)+\phi(m)$, the dynamics of real balances around the steady state
+can be described easily by multiplying both sides of (2.12) by $M_t$ and noting that $M_{t+1}=(1+\theta) M_t$
+
+$$
+\begin{align*}
+& B(m_{t+1}) \equiv \frac {\beta}{1+\theta}v_c (c^{ss})m_{t+1} \\
+& = [v_C(c^{ss})-\phi_m(m_t)]m_t \equiv A(m_t), \tag{2.23}
+\end{align*}
+$$
+
+## Steady-state real balances
+
+![](fig21.png){width=600px}
+
+## SS with a Time-Varying Money Stock {.smaller}
+
+$$
+u_c(c^*, m_t)=\beta [f_k(k^*)+1-\delta]u_c(c^*,m_{t+1}), \tag{2.24}
+$$
+$$
+\frac {1+i_t}{{(1+\pi_{t+1})}} = [f_k(k^*)+1+\delta], \tag{2.25}
+$$
+
+- and (2.12) implies
+
+$$
+\frac {{u_m}(c^*,m_t)} {{u_c}(c^*,m_t)} = \frac {i_t} {1+i_t}, \tag{2.26}
+$$
+
+- and the economy's resource constraint becomes $c^* = f(k^*) - \delta k^*$.
+
+- The evolution of the real stock of money is given by
+
+$$
+m_t={ (\frac {1+\theta_t}{1+\pi_t}) }m_{t-1}. \tag{2.27}
+$$
+
+
+## For (2.24) to hold requires 
+
+- the marginal utility of consumption to rise over time such that
+
+$$
+\frac {{u_c}(c^*, m_{t+1})} {{u_c}(c^*,m_t)} = \frac {1}{\beta [f_k(k^*)+1-\delta]} > 1. \tag{2.28}
+$$
+
+
+## Following Fisher
+
+- If, following @fischerCapitalAccumulationTransition1979, the utility function takes the form 
+
+$$
+u_c(c,m) = \frac {(c^{1-\gamma} m^{\gamma})^{1-\eta} } {1-\eta}, \tag{2.29}
+$$
+
+with $\eta<1$ and $\gamma \in (0,1)$,then 2.28 requires that real money balances evolve according to 
+
+$$
+\frac {{m_t}} {{m_{t+1}}} =\{ \frac {{1}} {{\beta[f_k(k^*) + 1-\delta]}}  \} ^\frac {1} {\gamma(1-n)}{}, \tag{2.30}
+$$
+
+## The key equilibrium condition in the MIU model
+
+- (2.12) can be written as
+
+$$
+u_m (\frac {M_0}{P_t}) = [1 - \beta \frac {{P_t}} {{P_{t+1}}}]u_c(c), \tag{2.31}
+$$
+
+## Equilibrium inflationary path with a fixed nominal money supply
+
+![](fig22.png)
+
+## 2.2.3 The Interest Elasticity of Money Demand 
+
+$$
+u(c_t,m_t) =[{{ac_t}^{1-b} } +{(1-a)m_t}^{1-b}]^\frac {1}{1-b}, \tag{2.32}
+$$
+
+- and (2.12) can be written as 
+
+$$
+m_t= {(\frac {1-a}{a})}^\frac{1}{b} {(\frac {i}{1+i})}^\frac  {{-1}} {{b}} c_t, \tag{2.33}
+$$
+
+## To model empirical money demand (log specification) {.smaller}
+
+$$
+log \frac {M_t}{P_t} = \frac {1}{b} log (\frac {1-a}{a}) + log\ c - \frac {1}{b} log \frac {i}{1+i}, \tag{2.34}
+$$
+
+
+- which gives the real demand for money as a negative function of the nominal rate of interest and a positive function of consumption
+- The consumption (income) elasticity of money demand is equal to 1 in this specification
+- The elasticity of money demand with respect to the opportunity cost variable is 1/b
+
+
+## Empirical Evidence on the Interest Elasticity of Money Demand {.smaller}
+
+- Ball (2001) argued that in postwar samples ending prior to the late 1980s, the high degree of collinearity between output and interest rates made it difficult to obtain precise estimates of the income and interest elasticities of money demand. 
+- Based on data from 1946 to 1996, he found the income elasticity of the demand for the M1 monetary aggregate to be about 0.5 and the interest semielasticity to be about 0.5. 
+- An income elasticity less than 1 (the value implied by equation 2.34) is consistent with the findings of Knell and Stix. 
+- Teles and Zhou argued that M1 is not the relevant measure of money after 1980 because of the widespread changes in financial regulations. 
+- They focused on a monetary aggregate constructed by the Federal Reserve Bank of St. Louis, called money zero maturity (MZM), which measures balances available immediately for transactions at zero cost. 
+
+## Empirical Evidence on the Interest Elasticity of Money Demand (cont'd) {.smaller}
+
+- Teles and Zhou also assumed an income elasticity of 1 and estimated the interest 
+elasticity of money demand to be 0.24. 
+- Lucas (2000) obtained an estimate of 0.5 for the interest elasticity of M1 demand. 
+- Chari, Kehoe, and McGrattan (2000) estimated (2.34) using quarterly U.S.data and the M1 definition of money. 
+- They obtained an estimate for a of about 0.94 and an estimate of the interest elasticity of money demand of 0.39, implying a value of b on the order of 1/0.39 $\approx$ 2.6. 
+- Christiano, Eichenbaum, and Evans (2005) reported an interest semielasticity of 0.96 (the partial of log real money holdings with respect to the gross nominal interest rate), obtained as part of the estimation of a DSGE model.
+
+
+## 2.2.4 Limitations {.smaller}
+
+- In the MIU model, reason for individuals to hold money: it provides utility. 
+- Solves the problem of generating a positive demand for money by assumption; 
+- It doesn't address the reasons that money, particularly money in the form of 
+unbacked pieces of paper, might yield utility. 
+- The money-in-the-utility function approach should be thought of as a shortcut for a fully specified model of the transaction technology faced by housebold
+
+
+## 2.3 The Welfare Cost of Inflation 
+
+![](fig23.png)
+
+
+
+## Welfare costs of inflation estimate
+
+- @lucasInflationWelfare2000 provided estimates of the welfare costs of inflation, starting with the following specification of the instantaneous utility function: 
+
+$$
+u(c,m)= \frac {1}{1-\sigma} \{ [c\vartheta \frac {m}{c} ]^{1-\sigma } -1 \} \tag{2.35}
+$$
+
+- With this utility function, (2.12) becomes
+
+$$
+\frac {{u_m}} {{u_c}} = \frac {{\vartheta'}(x)} {{\vartheta(x)}- x\vartheta'(x)} = \frac{i}{1+i} = \Upsilon,  \tag{2.36}
+$$
+
+## If this cost is denoted 
+
+- $w \Upsilon$, it is defined by
+
+$$
+u(1+w(\Upsilon), m(\Upsilon)) \equiv (1,m^*), \tag{2.37}
+$$
+- where $m(\Upsilon)$ denotes the solution of (2.36) for real money balances evaluated at steadystate consumption c = 1
+
+$$
+w\Upsilon = \sqrt {\beta \Upsilon}. \tag{2.38}
+$$
+
+## The welfare costs for two alternative specifications of money demand
+
+- The first form:
+
+$$
+ln(m) = ln(A) - \eta\ ln (i); \tag{2.39}
+$$
+- The second form:
+
+$$
+ln(m)= ln(B) - \xi i. \tag{2.40}
+$$
+
+- Based on annual U.S. data from the period 1900-1994, Lucas obtained estimates of 0.5 
+for $\eta$ and 7 for $\xi$
+
+## References
+
+
+```{=html}
+<!-- 
+# {background-iframe="grid-worms/index.html"} 
+Background for title slide, not working in this version of Quarto -->
+```
