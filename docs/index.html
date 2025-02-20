@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Tedy Herlambang">
-  <title>Firm Growth in Southeast Asia</title>
+  <title>Heterogenous Causality: Firm Growth in Southeast Asia</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -29,7 +29,27 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -322,13 +342,17 @@
       margin-right: 0; 
     }
   </style>
+  <script src="index_files/libs/kePrint-0.0.1/kePrint.js"></script>
+
+  <link href="index_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section data-background-opacity="0.5" data-background-position="2% 2%" data-background-size="15%" class="quarto-title-block center">
-  <h1 class="title">Firm Growth in Southeast Asia</h1>
+  <h1 class="title">Heterogenous Causality: Firm Growth in Southeast Asia</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -340,15 +364,6 @@ Tedy Herlambang
 
 </section>
 <section class="slide level2 scrollable">
-<h2>Aims</h2>
-<ul>
-<li>In this study, we analyze ways of conceptualizing firm growth by implementing the “right-factors configuration,” illustrated through an analog of a recipe and its ingredients.</li>
-<li>Specifically, we will research the multiple combinations of internal and external ingredients required to accomplish the firm growth.</li>
-<li>Therefore, it is important to further explore these phenomena using lines of tools to investigate whether we have the right causal story of firm growth.</li>
-<li>Using a sample of firms from Southeast Asia, we apply qualitative Set-Theoretic Multi-Method Research (SMMR) + Quantile Analysis - to test the importance of each condition in sales and employment growth.</li>
-</ul>
-</section>
-<section class="slide level2 scrollable">
 <h2>Background</h2>
 <ul>
 <li>Southeast Asia - the globe’s richest biologically</li>
@@ -357,97 +372,151 @@ Tedy Herlambang
 <li>Firms provide “prosperity” and “opportunity” if they are able to grow.</li>
 </ul>
 </section>
-<section class="slide level2 scrollable">
+<section class="slide level2">
 <h2>Firm growth</h2>
 
-<img data-src="images/ppf.png" class="quarto-figure quarto-figure-left r-stretch" style="width:50.0%"><ul>
-<li>Heuristic device - PPC: quantity and quality of input</li>
-<li>Flexibility in both in inputs and in scale of output
-<ul>
-<li>Firms can easily make changes in technology, workforce size and composition, product, location.</li>
-</ul></li>
+<img data-src="images/ppf.png" class="quarto-figure quarto-figure-left r-stretch" style="width:80.0%"><ul>
+<li>Heuristic - PPC: quantity and quality of input</li>
+<li>Flexibility for firms to make changes in technology, workforce size and composition, product, location.</li>
 <li>Complex process: requires conditions and specific types of resources and capabilities</li>
-<li>Theories: internal and external factors</li>
 </ul>
 </section>
-<section class="slide level2 scrollable">
-<h2>Firm Heterogeneity</h2>
+<section class="slide level2">
+<h2>Complex process</h2>
 <ul>
-<li>Heterogeneity between firms on a large number of key dimensions, resources and capabilities</li>
-<li>Research has revealed that the majority of ﬁrms do not grow, a small number of them enjoy very high growth rates, and many are not even interested in pursu- ing growth (Albulescu et al., 2021; Coad et al., 2024; Storey, 2016; Wiklund et al., 2003).</li>
-<li>Empirical works at the ﬁrm level suggest that ﬁrm growth appeared to be haphazard, where various variables such as - proﬁt, productivity, investment, ﬁrms’ age, competition between ﬁrms, characteristics of the entrepreneur, ownership structure, ﬁrms’ legal status, capital intensity, industry speciﬁc sector not being able to explain more than a fraction of the variance in ﬁrm growth rates.</li>
-<li>Some emphasize external limitations, e.g.&nbsp;an unsympathetic banking community, failures of business education, or constricting government purchasing policies, while others put the emphasis on internal factors, such as the ability to change management structure or unwillingness to increase beyond a certain size with all that may entail in terms of loss of independence and personal work relationships. Because of these works, Bottazzi &amp; Secchi (2006) contend that “luck” is the principal factor that ﬁnally distinguishes winners from losers among the contenders. Similarly, Guarascio &amp; Tamagni (2019) lend support to luck and random theories of ﬁrm growth challenging innovation persistence theories.</li>
+<li>Firms are heterogeneous on a large number of key dimensions, resources and capabilities.</li>
+<li>Firms operate in diverse environment.</li>
+<li>Different propensity to grow: majority do not grow, a small number enjoy very high growth rates, and many are not even interested in pursuing growth (<span class="citation" data-cites="albulescuNonlinearRelationshipFirm2021">Albulescu, Tămășilă, and Tăucean (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span>; <span class="citation" data-cites="coadScaleUpsHighGrowthFirms2024">Coad et al. (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span>; <span class="citation" data-cites="storeyUnderstandingSmallBusiness2016">Storey (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span>; <span class="citation" data-cites="wiklundWhatTheyThink2003">Wiklund, Davidsson, and Delmar (<a href="#/references" role="doc-biblioref" onclick="">2003</a>)</span>).</li>
 </ul>
 </section>
-<section class="slide level2 scrollable">
-<h2>Sahiti</h2>
+<section class="slide level2 smaller">
+<h2>Complexity</h2>
 <ul>
-<li><p>Sahiti (2019) has explored various external/macro and internal/micro factors that may enable or/and constrain the growth of ﬁrm in less-developed economies. He revealed that ﬁrm growth cannot be assigned to one or other of these categories, but it is the interaction among macro and micro issues that counts.</p></li>
-<li><p>Prior empirical studies found that ﬁrms can operate in different condition and achieve similar results or they can operate in the same condition and achieve different results. For example Coad &amp; Tamvada (2012) found that some small ﬁrms are able to convert know-how into commercial success, while many others are unable to translate it into superior growth. Small ﬁrms do not necessarily grow faster than their larger counterparts as predicted by Gibrat’s Law, but depend on sector speciﬁc industry (Guerzoni et al., 2024). Moreover, rapid growth ﬁrms are not concentrated in speciﬁc industries. Contrary to common belief, these ﬁrms may be found in labor as well as knowledge intensive industries; in manufacturing as well as the service sector (Smallbone et al., 1995; Storey, 2016). Even within industries, there is a considerable idiosyncratic component in ﬁrm growth rates. For example, industries containing many fast-growing ﬁrms also contain a large number of ﬁrms experiencing rapid decline (Headd &amp; Kirchhoff, 2007).</p></li>
+<li>Firms can operate in different condition and grow or they can operate in the same condition but do not grow.
+<ul>
+<li><span class="citation" data-cites="coadFirmGrowthBarriers2012">Coad and Tamvada (<a href="#/references" role="doc-biblioref" onclick="">2012</a>)</span> found that some small firms are able to convert know-how into commercial success, while many others are unable to translate it into superior growth.</li>
+<li><span class="citation" data-cites="guerzoniWasRobertGibrat2024">Guerzoni, Riso, and Vivarelli (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span> found that small firms do not necessarily grow faster than their larger counterparts, depend on sector specific industry.</li>
+<li>Rapid growth firms are not concentrated in specific industries: labor or knowledge intensive industries; in manufacturing or service sector (<span class="citation" data-cites="smallboneCharacteristicsStrategiesHigh1995">Smallbone, Leig, and North (<a href="#/references" role="doc-biblioref" onclick="">1995</a>)</span>; <span class="citation" data-cites="storeyUnderstandingSmallBusiness2016">Storey (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span>).</li>
+<li>Idiosyncratic component even within industries: industries containing many fast-growing firms also contain a large number of firms experiencing rapid decline (<span class="citation" data-cites="headdSmallBusinessGrowth2007">Headd and Kirchhoff (<a href="#/references" role="doc-biblioref" onclick="">2007</a>)</span>).</li>
+</ul></li>
 </ul>
 </section>
 <section class="slide level2 scrollable">
 <h2>Configurational</h2>
 <ul>
-<li>Moreno-Menéndez &amp; Casillas (2021); Lu &amp; Dimov (2023); Sahiti (2019) have started the idea that the unique conﬁgurations of external condition, resources and capabilities of businesses are responsible for how much ﬁrms grow. We take up this idea that in business the prevailing way for ﬁrm to grow is the outcome of the conﬁguration of sets of conditions.</li>
+<li><span class="citation" data-cites="moreno-menendezHowFamilyBusinesses2021">Moreno-Menéndez and Casillas (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span>; <span class="citation" data-cites="luSystemDynamicsModelling2023">Lu and Dimov (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span>; <span class="citation" data-cites="sahitiGrowthFirmsLessDeveloped2019">Sahiti (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span> have started the idea that the unique conﬁgurations of external condition, resources and capabilities of firms are responsible for how much firms grow.</li>
+<li><span class="citation" data-cites="sahitiGrowthFirmsLessDeveloped2019">Sahiti (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span> revealed that firm growth cannot be assigned to one or other of these categories, but it is the interaction among macro and micro issues that counts.</li>
+<li>We take up this idea that the prevailing way for firm to grow is the outcome of the configuration of sets of conditions.</li>
 </ul>
 </section>
 <section class="slide level2 scrollable">
 <h2>Research Agenda</h2>
 <ul>
-<li><p>to advance the current understanding of the observed variations in ﬁrms’ growth performance and to provide an explanation of their potential origins. It is concerned with the growth and development of ﬁrms once successfully established. The central problem to be researched by the proposed study is the causes of ﬁrm growth variability at different levels of aggregation and the degree to which ﬁrm heterogeneity (micro factors) and business environment (macro factors) explain ﬁrm growth variability across multiple aggregation levels. In other words, this study seeks to explore conﬁgurations of factors suspected to causally inﬂuence ﬁrm growth.</p></li>
-<li><p>However, determining the essential factors that affect firms’ growth remains an open question</p></li>
-<li><p>Little is known about how interactions among internal and external that foster or hinder growth.</p></li>
+<li>To explore the degree to which firm heterogeneity (internal factors) and business environment (external factors) explain firm growth variability.</li>
+<li>To explore configurations of factors suspected to causally influence firm growth.</li>
+<li>Little is known about how configurations among internal and external that foster or hinder growth.</li>
 </ul>
 </section>
 <section class="slide level2">
 <h2>Theoretical background</h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 14px; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Theory</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Main_proponents</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Paradigm</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Growth_drivers</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Factors_identified</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">On_firms_flexibility_in_input_and_output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Neoclassical Economics (NE)</td>
+<td style="text-align: left;">Viner, J. (1931), Schumpeter, (1934), Lucas, (1978)</td>
+<td style="text-align: left;">Minimizing production costs, optimal size, firm are homogenous, mechanicist, reductionism</td>
+<td style="text-align: left;">Mostly internal</td>
+<td style="text-align: left;">Quantity of input, production efficiency</td>
+<td style="text-align: left;">NE treated production as a black box with market clearing solution static model</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Resource-Based View (RBV)</td>
+<td style="text-align: left;">Penrose (1995), Barney (1999)</td>
+<td style="text-align: left;">Exploiting the strengths associated with the resources available to firm</td>
+<td style="text-align: left;">Firms, consumers and structural change</td>
+<td style="text-align: left;">Workforce, management practices, size, age</td>
+<td style="text-align: left;">RBV proposes that firms with idiosyncratic configurations of resources: unique experience, team-work, and specific heterogenous internal resources can lead to superior performance</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Evolutionary Economics (EvE)</td>
+<td style="text-align: left;">Alchian, A. A. (1950)</td>
+<td style="text-align: left;">Economy undergoing continual evolutionary change and selection processes</td>
+<td style="text-align: left;">Welfare and evolving preferences</td>
+<td style="text-align: left;">Technology, innovation, institutions, infrastructure</td>
+<td style="text-align: left;">Fitter firms survive and grow by cost-reducing innovations or by imitating the industry best practice</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Population Ecology (PE)</td>
+<td style="text-align: left;">Hannan, M. T., &amp; Freeman, J. (1977)</td>
+<td style="text-align: left;">Firms require resources which are specific to niches</td>
+<td style="text-align: left;">Internal, industry or external</td>
+<td style="text-align: left;">Many physical, biological and social aspects</td>
+<td style="text-align: left;">PE and EvE add external environmental and institutional factors as determinants</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Entrepreneurial Ecosystem (EnE)</td>
+<td style="text-align: left;">Spigel, B. (2017), Stam and Van de Ven (2021), Schrijvers, Stam &amp; Bosma (2024)</td>
+<td style="text-align: left;">Systemic, complex, adaptive, configurational</td>
+<td style="text-align: left;">Institution, actors, factors</td>
+<td style="text-align: left;">Region, local and spatial specific factors</td>
+<td style="text-align: left;">Good environment, entrepreneurial entities (entrepreneurial enterprises, investment institutions, universities) and entrepreneurial environment (policies, culture, etc.).</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Complexity Economics (CE)</td>
+<td style="text-align: left;">Erdi, P. (2007), Roos, M. (2024), Morin, E. (1992, 2019), Iván Tarride &amp; Zuñiga, M. (2010)</td>
+<td style="text-align: left;">certainty-uncertainty, separation-connection, autonomy-dependence, complementary, concurrent and antagonistic</td>
+<td style="text-align: left;">Internal and external</td>
+<td style="text-align: left;">All the above factors</td>
+<td style="text-align: left;">EnE and CE assert that firm growth is viewed as configurations of external and internal characteristics of interest rather than as a disaggregation of their attributes that are treated in isolation from each other</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Output</td>
+<td style="text-align: left;">Real annual sales growth</td>
+<td style="text-align: left;">Coad, A. (2009, 2024), Murmann, et.al. (2016), Sahiti, F. (2019)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Annual employment growth</td>
+<td style="text-align: left;">Coad, A. (2009, 2024), Murmann, et.al. (2016), Sahiti, F. (2019)</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
 </section>
-<section class="slide level2 scrollable">
-<h2>QCA</h2>
+<section class="slide level2">
+<h2>Empirical works</h2>
 <ul>
-<li>A phenomenon is studied as a combination of conditions that together produce an outcome.</li>
-<li>The effect of a particular factors (or variables) on an outcome is never fixed, as it depends on the other factors that co-occur at that point in time.</li>
-<li>the effects of variables can only be investigated within the context of the case as a whole</li>
-<li>Which set of conditions are necessary and sufficient to producing an outcome.</li>
-<li>The aim: to specify the causal recipe or combination of causes that is sufficient to explain the outcome of each case in a multiple case study.</li>
-<li>The causal recipes can then be compared across cases in order to identify similarity and differences.</li>
+<li><strong>Internal</strong>: age, profit, productivity, investment, competition, owner, ownership structure, legal status, capital intensity, management structure; not being able to explain more than a fraction of the variance in firm growth rates.</li>
+<li><strong>External</strong>: an unsympathetic banking community, constricting government policies, tax and regulation, infrastructure, failures of business education.</li>
+<li>Luck and random theories … challenging innovation persistence theories (<span class="citation" data-cites="bottazziExplainingDistributionFirm2006">Bottazzi and Secchi (<a href="#/references" role="doc-biblioref" onclick="">2006</a>)</span>; <span class="citation" data-cites="guarascioPersistenceInnovationPatterns2019">Guarascio and Tamagni (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span>)</li>
 </ul>
 </section>
-<section class="slide level2 scrollable">
-<h2>QCA 2</h2>
-<ul>
-<li><p>Heterogenous causality: several different, but similar cases are selected and compared by comparing their heterogeneity (social complexity) and to the outcome (occurence/non-occurence),</p></li>
-<li><p>Conditions are examined at the cross case level in term of union (disjunctions) and intersection (conjunctions)</p></li>
-<li><p>Goal: to find out which disjunctions (logical <em>or</em>) or conjunctions (logical <em>and</em>) consistently show (or not) a relation to the outcome.</p></li>
-</ul>
-</section>
-<section class="slide level2 scrollable">
-<h2>Background</h2>
-<ul>
-<li>First, there are multiple different configurations of conditions that lead towards variability in firm growth.</li>
-<li>Second, we propose that the absence and the presence of these conditions could both work as growth barriers.</li>
-<li>Third, we assert that some conditions might only act as a growth barrier in combination with other conditions.</li>
-<li>Firm growth models is characterized by “theoretical multiplicity” the fact that, to understand the phenomena, one potentially needs to consider numerous factors that come from multiple theoretical perspectives.</li>
-<li>In these circumstances, we cannot grasp the impact of any single condition unless the complex context of other conditions are considered carefully. Against this background, we would benefit from a context-sensitive parameter for the explanatory power of conditions on outcome.</li>
-</ul>
-</section>
-<section class="slide level2 scrollable">
-<h2>Aims</h2>
-<ul>
-<li>Prior empirical studies found that firms can operate in different condition and achieve similar results or they can operate in the same condition and achieve different results.</li>
-<li>These evidences suggest that firms are also surprisingly heterogeneous with regards to their propensities for growth.</li>
-</ul>
-</section>
-<section class="slide level2 scrollable">
-<h2>Propositions</h2>
-<ul>
-<li>However, there is a lack of consensus about the specific configurations of conditions that are more favorable for firm growth to occur which highlights the diverse ways in which firms can successfully develop their growth.</li>
-<li>Hence, we advance with the following general proposition: <em>several equifinal combinations of internal and external factors exist that are sufficient for firm growth</em>.</li>
-<li>Such general proposition allow exploring configurations determining the growth of firm. We explore this general proposition into more specific propositions as follow:</li>
-</ul>
-</section>
-<section class="slide level2 scrollable">
+<section class="slide level2">
+<h2>Conceptual Framework</h2>
+
+<img data-src="images/configur.png" class="quarto-figure quarto-figure-center r-stretch" style="width:91.0%"></section>
+<section class="slide level2 smaller">
 <h2>Propositions</h2>
 <ul>
 <li><strong>Proposition 1</strong>: Management practice condition is an influential element in firm growth.</li>
@@ -460,104 +529,85 @@ Tedy Herlambang
 </ul>
 </section>
 <section class="slide level2 scrollable">
-<h2>Hypothesis</h2>
+<h2>QCA</h2>
 <ul>
-<li>The idea that the unique configuration of external condition, resources and capabilities of businesses are responsible for how much firms grow.</li>
-<li>We take up this idea that in business the prevailing way for firm to grow is the outcome of the configuration of sets of conditions.</li>
-<li>General hypothesis: is that the variables most commonly used in the measurement of internal and external factors have different effects on the conditions for firm growth.</li>
-<li>The model has been applied to micro and small, medium and large enterprises in the SEA.</li>
-</ul>
-</section>
-<section class="slide level2">
-<h2>Questions to be answered</h2>
-<ul>
-<li>This study aims to answer the following research question: How do different and multiple conﬁgurations of internal and external factors: lead to firm growth.</li>
+<li>A phenomenon is studied as a combination of conditions that together produce an outcome.</li>
+<li>The effect of a particular condition on outcome is never fixed, as it depends on the other condition that co-occur at that point in time.</li>
+<li>The aim is to specify the causal recipe that is sufficient to explain the outcome of each case in a multiple case study.</li>
+<li>The causal recipes can then be compared across cases in order to identify similarity and differences.</li>
 </ul>
 </section>
 <section class="slide level2 scrollable">
-<h2>Methodology</h2>
+<h2>QCA</h2>
 <ul>
-<li>Considering possible complex combinations of the different conditions: creativity, innovation networks, and resources (Fiss, 2011; Ragin, 2008), we use a particular type of qualitative comparative analysis (QCA) methodology: the fuzzy-set QCA (fsQCA), a conﬁgurational method based on set theory that explains complex causality in terms of necessary and sufficient conditions to achieve the analytical outcome (Misangyi and Acharya, 2014).</li>
-<li>This proves there is no unique way to obtain growth (be it sales or employment growth), but several ways are possible based on the mix of ingredients in the recipe.</li>
+<li>Heterogeneous causality: several different, but similar cases are selected and compared by comparing their heterogeneity (social complexity) and to the outcome (occurrence/non-occurrence),</li>
+<li>Conditions are examined at the cross case level in term of union (disjunctions) and intersection (conjunctions)</li>
+<li>The goal is to find out which disjunctions (logical <em>or</em>) or conjunctions (logical <em>and</em>) consistently show (or not) a relation to the outcome.</li>
 </ul>
 </section>
+<section class="slide level2">
+<h2>Data</h2>
+<ul>
+<li>Main: World Bank Enterprise Survey <a href="https://www.enterprisesurveys.org/en/enterprisesurveys">WBES</a></li>
+<li>8 ASEAN members + Timor Leste (2009-2023)</li>
+<li>Sampling stratification: firm size, location, business sector</li>
+<li>Post stratification: gender of top manager, exporting status, ownership</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Outputs</h2>
+<ul>
+<li>[perf1] Real annual sales growth (%)</li>
+<li>[perf2] Annual employment growth (%)</li>
+<li>[perf3] Real annual labor productivity growth (%)</li>
+<li>[perf4] Percent of firms buying fixed assets</li>
+<li>[t3] Capacity utilization (%)*</li>
+</ul>
+</section>
+<section class="slide level2 smaller">
+<h2>Conditions</h2>
+<ul>
+<li>[mgmt1] Management practices index 0-100 in from 2023</li>
+<li>[t7] Percent of firms that introduced a new product/service over last 3 years</li>
+<li>[t9] Percent of firms that introduced a process innovation over last 3 years</li>
+<li>[t10] Percent of firms that spend on R&amp;D in the last fiscal years</li>
+<li>[wk19] Proportion of skilled workers, out of all permanent production workers</li>
+<li>[gend1] Percent of firms with women participation in ownership</li>
+<li>[fin23] Percent of firms that are fully credit constrained</li>
+<li>[reg1] Senior management time spent in dealing with government regulation</li>
+<li>[graft2] Bribery depth</li>
+<li>[in11] Percent of firms identifying transportation as a major or very severe constraint</li>
+<li>[hc] Percent of the population with a tertiary education, and e-skills</li>
+<li>[dmd] Disposable income per capita relative to ASEAN average</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Operationalisation</h2>
+
+<img data-src="images/operationalisation.png" class="quarto-figure quarto-figure-center r-stretch" style="width:91.0%"></section>
+<section class="slide level2 smaller">
+<h2>Data frame</h2>
+
+<img data-src="images/dataframe.png" class="quarto-figure quarto-figure-center r-stretch" style="width:91.0%"><ul>
+<li><span class="math inline">\(sec_{sjt}\)</span>: firm sector <span class="math inline">\(s\)</span> in country <span class="math inline">\(j\)</span> at year <span class="math inline">\(t\)</span>.</li>
+<li><span class="math inline">\(siz_{zjt}\)</span>: firm size <span class="math inline">\(z\)</span> in country <span class="math inline">\(j\)</span> at year <span class="math inline">\(t\)</span>.</li>
+<li><span class="math inline">\(loc_{ljt}\)</span>: firm location <span class="math inline">\(l\)</span> in country <span class="math inline">\(j\)</span> at year <span class="math inline">\(t\)</span>.</li>
+<li><span class="math inline">\(exp_{ejt}\)</span>: firm exporter status <span class="math inline">\(e\)</span> in country <span class="math inline">\(j\)</span> at year <span class="math inline">\(t\)</span>.</li>
+<li><span class="math inline">\(gen_{gjt}\)</span>: firm top manager gender <span class="math inline">\(g\)</span> in country <span class="math inline">\(j\)</span> at year <span class="math inline">\(t\)</span>.</li>
+<li><span class="math inline">\(own_{ojt}\)</span>: firm ownership status <span class="math inline">\(o\)</span> in country <span class="math inline">\(j\)</span> at year <span class="math inline">\(t\)</span>.</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>SMMR design</h2>
+
+<img data-src="images/smmr-design.png" class="quarto-figure quarto-figure-center r-stretch" style="width:91.0%"></section>
 <section class="slide level2 scrollable">
 <h2>Contribution</h2>
 <ul>
-<li>This study provides insights into new ways of conceptualizing firms’ improvements in terms of making business environment right by implementing a “right-factors configuration,” a map of combinations of innovation ingredients.</li>
-<li>Rather than considering that firm growth based on correlation or the effects of independent variables on the outcome, instead this study considers it to be the result of the interaction of different conditions of internal and external</li>
+<li>This study provides insights into new ways of conceptualizing firms’ improvements in terms of making business environment right by implementing a “right-factors configuration,” a map of combinations of conditions.</li>
 </ul>
 </section>
-<section class="slide level2 scrollable">
-<h2>QCA:</h2>
-<ul>
-<li>Qualitative Comparative Analysis (QCA), an approach for establishing causal relationships between conditions and outcomes.</li>
-<li>addresses causal complexity by identifying various causal “recipes” leading to the same outcome</li>
-<li>fsQCA seeks to establish logical connections between combinations of causal conditions and an outcome, the result being rules that describe how combinations of causal conditions would cause the desired outcome.</li>
-<li>So, each rule is a possible path from the causal conditions to the outcome.</li>
-<li>QCA is particularly effective in addressing challenges of complex causality, where different causal “recipes” can lead to the same outcome.</li>
-<li>In contrast to classical correlational techniques, QCA is based on set theory, making it ideal for examining explicit connections and exploring diverse combinations of causal conditions.</li>
-<li>An especially useful feature of QCA is its ability to analyze complex causality, defined as a situation where an outcome may result from various different combinations of causal conditions, or different “causal recipes.”</li>
-<li>FsQCA is employed to analyze cases to identify relationships among present or absent conditions in the cases and the outcome of interest (Ragin, 2008).</li>
-<li>In other words, this method aims to identify the conditions that are necessary or sufﬁcient for an outcome to occur (Gligor and Bozkurt, 2020).</li>
-<li>The results were examined for consistency and coverage. A high membership consistency is paramount because it implies that a condition will not exist in the presence or absence of the outcome. Coverage indicates the percentage of cases explained by a conﬁguration (causal combination of ingredients).</li>
-</ul>
-</section>
-<section class="slide level2">
-<h2>Steps</h2>
-<ul>
-<li>The steps to investigate QCA are as follows: (i) identiﬁcation of the conditions and outcome; (ii) analysis of the sample; (iii) calibration of conditions; (iv) necessity analysis; (v) “truth table” analysis; and (iv) sufﬁciency analysis.</li>
-</ul>
-</section>
-<section class="slide level2 scrollable">
-<h2>Calibration</h2>
-<ul>
-<li>Before using fsQCA, the first step is to transform raw data into datasets.</li>
-<li>This step is known as calibration (Ragin, 2008) and indicates whether a value belongs to a set.</li>
-<li>Speciﬁcally, this study employed direct calibration, which deﬁnes three thresholds: completely in set (1), the point of maximum ambiguity (neither in nor out: 0.5), and entirely outside the set (0).</li>
-<li>Table 1 shows the main descriptive statistics of the outcome variables and conditions, the external criteria used for calibration, and the cutoff points. For a detailed description of the calibration procedure, see Ragin (2008, pp.&nbsp;86e94).</li>
-</ul>
-</section>
-<section class="slide level2 scrollable">
-<h2>The main tool</h2>
-<ul>
-<li><p>The main tool for analyzing causal complexity using QCA is the truth table (Ragin 1987; 2000; 2008),</p></li>
-<li><p>a tool that allows for structured and focused comparisons. Truth tables list the logically possible combinations of causal conditions and the associated empirical outcome for each configuration.</p></li>
-<li><p>In more complex analyses, the rows (representing combinations of causal conditions) can be quite numerous, as the number of causal combinations is an exponential function of the number of causal conditions (number of causal combinations = 2^k, where k is the number of causal conditions).</p></li>
-<li><p>According to Ragin (2008), the key point is that the truth table elaborates and formalizes one of the main analytical strategies of comparative research—examining cases that share specific combinations of causal conditions to see if they yield the same outcome.</p></li>
-<li><p>In fact, the primary aim of truth table analysis is to identify explicit connections between combinations of causal conditions and outcomes.</p></li>
-<li><p>By listing the different logically possible combinations of conditions, it becomes possible to assess not only the sufficiency of a specific recipe but also the sufficiency of other logically possible combinations of conditions that can be constructed from these causal conditions.</p></li>
-</ul>
-</section>
-<section class="slide level2 scrollable">
-<h2>The fsQCA variant: An overview</h2>
-<ul>
-<li><p>Fuzzy sets are simultaneously qualitative and quantitative as they incorporate both types of distinctions in calibrating the degree of membership in the set.</p></li>
-<li><p>Therefore, fuzzy sets have many of the virtues of conventional interval and ratio scale variables, while at the same time allowing for a qualitative assessment (Ragin 2008; Rihoux and Ragin 2008).</p></li>
-<li><p>A fuzzy set can be seen as a continuous variable that has been purposely calibrated to indicate the degree of membership in a well-defined and specified set.</p></li>
-<li><p>This calibration is only possible through the use of theoretical and substantive knowledge, essential for specifying three or more qualitative breakpoints.</p></li>
-<li><p>By using fuzzy sets to assess theoretical set relations, both the outcome and causal conditions can be represented in terms of membership scores.</p></li>
-<li><p>In calibration, all factors are transformed into fuzzy sets with a range of values from 0 to 1.</p></li>
-<li><p>This can be done directly or indirectly, based on data and underlying theory.</p></li>
-<li><p>In the direct form, three qualitative thresholds (or breakpoints) are chosen, while in the indirect form, factors are calibrated based on qualitative assessments.</p></li>
-<li><p>The thresholds define full membership, full non-membership, and intermediate membership, representing the degree to which a case belongs to a set (Ragin 2000; 2006; 2008; Rihoux and Ragin 2008; Fiss 2011; Woodside 2014; Jang et al.&nbsp;2015).</p></li>
-<li><p>Next, fsQCA produces a truth table with 2^k rows (k being the number of predictors, and each row representing every possible combination), which is ranked based on frequency (i.e., the number of observations for each combination) and consistency (i.e., “the degree to which cases match the set-theoretic relations expressed in a solution”).</p></li>
-<li><p>To obtain a minimum number of observations for evaluating the relationships, a frequency threshold is set.</p></li>
-<li><p>Additionally, the consistency threshold is set above the recommended cut-off of 0.85 (Ragin 2008).</p></li>
-<li><p>Combinations above the consistency threshold are those that fully explain the outcome, meaning for these combinations, the outcome variable is defined as 1, and for the rest, it is defined as 0.</p></li>
-<li><p>fsQCA offers three sets of solutions (complex, parsimonious, intermediate) that need to be interpreted by the researcher.</p></li>
-<li><p>The complex solution presents all combinations of conditions when logical operations are applied and are then simplified into parsimonious as well as intermediate solutions, as they are more straightforward to interpret (Ragin 2006; 2008; Fiss, 2011).</p></li>
-</ul>
-</section>
-<section class="slide level2 scrollable">
-<h2>Necessity and sufﬁciency analyses</h2>
-<ul>
-<li>In particular, two models were analyzed (see Fig. 1). The fsQCA explained complex causality in terms of necessity and sufficiency.</li>
-<li>A condition is deemed necessary if the outcome cannot occur without this condition, whereas it is sufﬁcient if the outcome occurs every time it is present (Legewie, 2013).</li>
-<li>Necessity and sufficiency analyses were carried out using the software R, <code>SetMethod</code> and <code>QCA</code>.</li>
-</ul>
-</section>
-<section class="slide level2">
+<section class="slide level2 smaller scrollable" id="references">
 <h2>References</h2>
 <!-- 
 # {background-iframe="grid-worms/index.html"} 
@@ -566,6 +616,47 @@ Background for title slide, not working in this version of Quarto -->
 <p><img src="images/logo-ub-bottom.png" class="slide-logo"></p>
 <div class="footer footer-default">
 <p>ub.ac.id</p>
+</div>
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-albulescuNonlinearRelationshipFirm2021" class="csl-entry" role="listitem">
+Albulescu, Claudiu Tiberiu, Matei Tămășilă, and Ilie Mihai Tăucean. 2021. <span>“The <span>Nonlinear Relationship Between Firm Size</span> and <span>Growth</span> in the <span>Automotive Industry</span>.”</span> <em>Journal of Industry, Competition and Trade</em> 21 (3): 445–63. <a href="https://doi.org/10.1007/s10842-021-00364-6">https://doi.org/10.1007/s10842-021-00364-6</a>.
+</div>
+<div id="ref-bottazziExplainingDistributionFirm2006" class="csl-entry" role="listitem">
+Bottazzi, Giulio, and Angelo Secchi. 2006. <span>“Explaining the Distribution of Firm Growth Rates.”</span> <em>The RAND Journal of Economics</em> 37 (2): 235–56. <a href="https://doi.org/10.1111/j.1756-2171.2006.tb00014.x">https://doi.org/10.1111/j.1756-2171.2006.tb00014.x</a>.
+</div>
+<div id="ref-coadScaleUpsHighGrowthFirms2024" class="csl-entry" role="listitem">
+Coad, Alex, Anders Bornhäll, Sven-Olov Daunfeldt, and Alexander McKelvie. 2024. <em>Scale-<span>Ups</span> and <span>High-Growth Firms</span>: <span>Theory</span>, <span>Definitions</span>, and <span>Measurement</span></em>. Springer Nature. <a href="https://books.google.com?id=_1_8EAAAQBAJ">https://books.google.com?id=_1_8EAAAQBAJ</a>.
+</div>
+<div id="ref-coadFirmGrowthBarriers2012" class="csl-entry" role="listitem">
+Coad, Alex, and Jaganaddha Pawan Tamvada. 2012. <span>“Firm Growth and Barriers to Growth Among Small Firms in <span>India</span>.”</span> <em>Small Business Economics</em> 39 (2): 383–400. <a href="https://doi.org/10.1007/s11187-011-9318-7">https://doi.org/10.1007/s11187-011-9318-7</a>.
+</div>
+<div id="ref-guarascioPersistenceInnovationPatterns2019" class="csl-entry" role="listitem">
+Guarascio, Dario, and Federico Tamagni. 2019. <span>“Persistence of Innovation and Patterns of Firm Growth.”</span> <em>Research Policy</em> 48 (6): 1493–1512. <a href="https://doi.org/10.1016/j.respol.2019.03.004">https://doi.org/10.1016/j.respol.2019.03.004</a>.
+</div>
+<div id="ref-guerzoniWasRobertGibrat2024" class="csl-entry" role="listitem">
+Guerzoni, Marco, Luigi Riso, and Marco Vivarelli. 2024. <span>“Was <span>Robert Gibrat</span> Right? <span>A</span> Test Based on the Graphical Model Methodology.”</span> <em>Small Business Economics</em>, April. <a href="https://doi.org/10.1007/s11187-024-00915-1">https://doi.org/10.1007/s11187-024-00915-1</a>.
+</div>
+<div id="ref-headdSmallBusinessGrowth2007" class="csl-entry" role="listitem">
+Headd, Brian, and Bruce A. Kirchhoff. 2007. <span>“Small <span>Business Growth</span>: <span>Searching</span> for <span>Stylized Facts</span>.”</span> SSRN Scholarly Paper. Rochester, NY. October 23, 2007. <a href="https://doi.org/10.2139/ssrn.1024026">https://doi.org/10.2139/ssrn.1024026</a>.
+</div>
+<div id="ref-luSystemDynamicsModelling2023" class="csl-entry" role="listitem">
+Lu, Jinfeng, and Dimo Dimov. 2023. <span>“A System Dynamics Modelling of Entrepreneurship and Growth Within Firms.”</span> <em>Journal of Business Venturing</em> 38 (3): 106285. <a href="https://doi.org/10.1016/j.jbusvent.2022.106285">https://doi.org/10.1016/j.jbusvent.2022.106285</a>.
+</div>
+<div id="ref-moreno-menendezHowFamilyBusinesses2021" class="csl-entry" role="listitem">
+Moreno-Menéndez, Ana M., and José C. Casillas. 2021. <span>“How Do Family Businesses Grow? <span>Differences</span> in Growth Patterns Between Family and Non-Family Firms.”</span> <em>Journal of Family Business Strategy</em> 12 (3): 100420. <a href="https://doi.org/10.1016/j.jfbs.2021.100420">https://doi.org/10.1016/j.jfbs.2021.100420</a>.
+</div>
+<div id="ref-sahitiGrowthFirmsLessDeveloped2019" class="csl-entry" role="listitem">
+Sahiti, Fadil. 2019. <em>The <span>Growth</span> of <span>Firms</span> in <span>Less-Developed Countries</span>: <span>Lessons</span> from <span>Kosovo</span></em>. Cham: Springer International Publishing. <a href="https://doi.org/10.1007/978-3-030-14821-8">https://doi.org/10.1007/978-3-030-14821-8</a>.
+</div>
+<div id="ref-smallboneCharacteristicsStrategiesHigh1995" class="csl-entry" role="listitem">
+Smallbone, David, Roger Leig, and David North. 1995. <span>“The Characteristics and Strategies of High Growth <span>SMEs</span>.”</span> <em>International Journal of Entrepreneurial Behavior &amp; Research</em> 1 (3): 44–62. <a href="https://doi.org/10.1108/13552559510100657">https://doi.org/10.1108/13552559510100657</a>.
+</div>
+<div id="ref-storeyUnderstandingSmallBusiness2016" class="csl-entry" role="listitem">
+Storey, David J. 2016. <em>Understanding <span>The Small Business Sector</span></em>. Routledge. <a href="https://books.google.com?id=B263DAAAQBAJ">https://books.google.com?id=B263DAAAQBAJ</a>.
+</div>
+<div id="ref-wiklundWhatTheyThink2003" class="csl-entry" role="listitem">
+Wiklund, Johan, Per Davidsson, and Frédéric Delmar. 2003. <span>“What <span>Do They Think</span> and <span>Feel</span> about <span>Growth</span>? <span>An Expectancy</span>–<span>Value Approach</span> to <span>Small Business Managers</span>’ <span>Attitudes</span> Toward <span>Growth</span>.”</span> <em>Entrepreneurship Theory and Practice</em> 27 (3): 247–70. <a href="https://doi.org/10.1111/1540-8520.t01-1-00003">https://doi.org/10.1111/1540-8520.t01-1-00003</a>.
 </div>
 </div>
 </section>
