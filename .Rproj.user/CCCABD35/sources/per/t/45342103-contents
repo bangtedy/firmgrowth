@@ -33,19 +33,19 @@ Economists and policymakers are interested in studying the potential determinant
 
 ## The literature {.scrollable}
 
-The evidence remains inconclusive!!
+The evidence remains [inconclusive!!]{style="color:red;"}
 
-- For large firms, studies highlight factors like trade costs, lower Research and Development (R&D) spending and macro factors such as taxation and regulation.
-- For studies on small firms in developing countries, stress firm capabilities, access to external finance, favorable location and geographical factors and robust social and physical infrastructure. 
+- For large firms: trade costs, lower Research and Development (R&D) spending and macro factors such as taxation and regulation.
+- For small firms: firm capabilities, access to external finance, favorable location and geographical factors and robust social and physical infrastructure. 
 - There are also studies which suggest that the development of the financial sector need not always be a pre-requisite for firm growth.
 
 ## Thus...contextual and configural?
 
-Given the evident lack of consensus in the existing literature, it is imperative to summarise this conflict as ...
+Given the evident lack of consensus in the existing literature, it is imperative to explore this conflict as ...
 
 <br />
 
-[the influence of various factors on firm growth varies from one country to another depends on the context and configuration?]{style="color:green;"}
+[The influence of various factors on firm growth varies from one country to another depends on the context]{style="color:green;"}
 
 ## Research agenda
 
@@ -53,14 +53,14 @@ Despite the difficulty imagining a modern economy without firm, the results of t
 
 <br />
 
-This variation of results prompts several questions about the conditions behind this and, most importantly, investigate the potential ["conditions"]{style="color:red;"} that cause firm growth.
+This variation of results prompts several questions about the [context]{style="color:green;"} behind this and, most importantly, investigate the potential ["conditions"]{style="color:red;"} that cause firm growth.
 
 ## Research questions
 
 1. Which configurations of conditions are associated with firm growth?
 2. How do these configurations differ across firm contexts?
 
-## Neoclassical economics {.scrollable}
+## Neoclassical economics {.smaller}
 
 Neo-classical economics provides a framework for understanding firm growth and its determinants: 
 
@@ -69,23 +69,25 @@ Neo-classical economics provides a framework for understanding firm growth and i
 - **Flexible Prices and Wages**: Prices and wages are adjusting to changes in supply and demand to maintain equilibrium in the market.
 - **Competitive Markets**: Firms operating in an environment close to perfect competition, where prices are determined by competitive pressures.
 
-## Determinants of firm growth {.scrollable}
+## Determinants of firm growth {.smaller}
 
-- **Capital Accumulation**: Investment in physical capital, such as machinery and equipment enhances their production capacity.
+- **Capital Accumulation**: Investment in physical capital, such as machinery and equipment enhances production capacity.
 - **Technological Progress**: Technological advancements improve productivity and efficiency...so that firms that adopt new technologies can produce more output with the same amount of inputs.
 - **Labor**: The quantity and quality of labor...firms grow by hiring more workers or by improving the skills and productivity of their existing workforce.
-- **Market Conditions**: The overall market environment: demand for products and services, competition, and regulatory factors... firms that operate in favorable market conditions are more likely to grow.
-- **Managerial Efficiency**: Effective management and organizational practices ... optimize resource allocation and improving decision-making processes.
+- **Market Conditions**: The overall market environment..demand for products and services, competition, and regulatory factors count... firms that operate in favorable market conditions are more likely to grow.
+- **Managerial Efficiency**: Effective management and organizational practices ... optimize resource allocation and improve decision-making processes.
 
-## Production Possibility Curve (PPC) {.smaller}
+## Production Possibility Curve {.smaller}
 
-![](images/ppf.png)
+```{r ppc, echo=FALSE, out.width="71%", fig.align='left', fig.cap=""}
+knitr::include_graphics("images/ppf.png")
+```
 
 - Growth requires increases in quantity and quality of input (K and L).
 - Growth requires conditions and specific types of resources and capabilities (firms are heterogeneous).
 - Firm growth requires flexibility to make changes in technology, workforce composition, product, location.
 
-## Criticisms of Neo-Classical Theory {.scrollable}
+## Criticisms of Neo-Classical Theory {.smaller}
 
 While neo-classical economics provides a useful framework for understanding firm growth, it has been criticized.
 
@@ -94,7 +96,11 @@ While neo-classical economics provides a useful framework for understanding firm
 - Many managers report that in the real economy the black box is not controlled by the force of MC = MR, but by something more fundamental. Apparently it is not solely the marginal cost that makes firms to go into the standby position. 
 - Real firms: enact strategies, manage the creation and acquisition of information and knowledge, and have internal organisational structures and processes.
 
-## Neoclassical economics +
+## Neoclassical economics [+]{style="color:green;"}
+
+```{r mrmc, echo=FALSE, out.width="71%", fig.align='left', fig.cap=""}
+knitr::include_graphics("images/mrmc.png")
+```
 
 - Transaction cost economics (TCE)
 - Resource base view (RBV)
@@ -108,29 +114,31 @@ As a black box that transforms factor inputs into outputs---how production and c
 
 [**An institutional entity**]{style="color:green;"}
 
-Identity, internal structure and external boundaries (Hodgson, 2002)
+Identity, internal structure and external boundaries.
 
-## Quantity, quality and flexibility (K&L)
+## Quantity, quality and flexibility
 
-- The quantity and quality of K and L is derived from $MRP_L$ and $MRP_K$ ... a techno-functional entity.
-- The flexibility in using K and L ... identity, internal structure and external boundaries...an institutional entity.
+- The quantity and quality of K and L is derived from $MRP_L$ and $MRP_K$ --- a techno-functional entity.
+- The flexibility in using K and L --- identity, internal structure and external boundaries --- an institutional entity.
 
-## Empirical barriers to business expansion {.smaller}
+## The three strongest obstacles {.smaller}
 
-If we were to point out the strongest factors determining the obstacles, there would be three interrelated ones: (1) uncertainty, (2) competition and (3) lack of path dependence in the accumulation of capital. 
+1. Uncertainty determines the inevitability of making mistakes in every action undertaken.
 
-- Uncertainty determines the inevitability of making mistakes in every action undertaken.
+2. Competition: there are always other entrepreneurs in markets who, in the environment of uncertainty, will succeed and fail at the same time as others do, interchangeably. 
 
-- Competition means that there are always other entrepreneurs in markets who, in the environment of uncertainty, will succeed and fail at the same time as others do, interchangeably. 
+3. Lack of path dependence: there is no guarantee that past successes improve the decision-making of firms in subsequent rounds.
 
-- And finally, the third decisive factor: there is no guarantee that past successes improve the decision-making of firms in subsequent rounds.
+```{r potentialmr, echo=FALSE, out.width="71%", fig.align='left', fig.cap=""}
+knitr::include_graphics("images/potentialMR.png")
+```
 
-## The message
+## The central message
 
-A central message presented in this research is that in discussing firm growth requires [both]{style="color:red;"} techno-functional and institutional foundations.
+In discussing firm growth requires [both]{style="color:red;"} techno-functional and institutional foundations.
 
-- A firm as a techno-functional entity implies an ability to hire, buy and organise factors of production and contract for the sale of output. 
-- This hiring, buying, organising and contracting implies a pre-existing institutional structure covering, for instance, legal and accounting systems. 
+- A firm as a techno-functional entity implies an ability to hire, buy and organize factors of production and contract for the sale of output. 
+- This hiring, buying, organizing and contracting implies a pre-existing institutional structure covering, for instance, legal and accounting systems. 
 
 ## The message
 
@@ -144,16 +152,19 @@ No universal status can be claimed for any particular theoretical perspective, i
 - Researchers in the social sciences have long observed that although we break up things into categories, we often use categories with blurred edges and gradations of membership. 
 - This is also true of many concepts employed in economics such as poverty, standard of living, financial inclusion, economic growth and firm growth.
 
+```{r standardofliv, echo=FALSE, out.width="71%", fig.align='right', fig.cap=""}
+knitr::include_graphics("images/standardofliving.png")
+```
 ## Growth as a matter of degree
 
 - Firm growth can be seen as [gradations]{style="color:red;"} of membership: stagnant, slow, fast, very fast.
 - If firm growth is thought to be [a matter of degree]{style="color:red;"}, then fuzzy set theory claims that we can meaningfully address the issue of how much the sets of firm that grow and its conditions [(such as financially constrained, partly constrained, size, age of firm)]{style="color:green;"} intersect.
 
-## QCA (Qualitative Comparative Analysis)
+## Qualitative Comparative Analysis
 
 - A phenomenon is studied as a combination of conditions that together produce an outcome.
 - The effect of a particular condition on outcome is never fixed, as it depends on the other condition that co-occur at that point in time.
-- The aim is to specify the causal [recipe]{style="color:red;"} that is sufficient to explain the outcome using set theory and Boolean algebra.
+- The aim of QCA is to specify the causal [recipe]{style="color:red;"} that is sufficient to explain the outcome using set theory and Boolean algebra.
 
 ## Firm growth QCA perspective
 
@@ -165,17 +176,22 @@ The prevailing way for firm to grow is the outcome of the configuration of sets 
 
 ## Previous empirical works
 
-Much work has been done using representative and comprehensive data sets.
+Much work has been done using representative and comprehensive data sets: the growth rate of a firm as *dependent variable* and a long list of other variables.
 
-- The growth rate of a firm as *dependent variable*, 
-- Attempts were made to explain this rate in terms of a long list of other variables.
 - Firm growth is highly idiosyncratic and difficult to predict
-- The growth rate distributions follow a "tent-shaped" pattern.
+- The growth rate distributions follow a "tent-shaped" or "cauchy" pattern.
+
+```{r cauchy, echo=FALSE, out.width="25%", fig.align='right', fig.cap=""}
+knitr::include_graphics("images/cauchy.png")
+```
 
 ## Previous empirical works
 
-- **Internal**: age, profit, productivity, investment, competition, owner, ownership structure, legal status, capital intensity, management structure.
-- **External**: an unsympathetic banking community, constricting government policies, tax and regulation, infrastructure, failures of business education. 
+[Internal]{style="color:green;"}: age, profit, productivity, investment, competition, owner, ownership structure, legal status, capital intensity, management structure.
+
+<br />
+
+[External]{style="color:green;"}: an unsympathetic banking community, constricting government policies, tax and regulation, infrastructure, failures of business education. 
 
 ## Data
 
@@ -238,22 +254,22 @@ knitr::include_graphics("images/operationalisation.png")
 
 ## Steps
 
-```{r qcasteps, echo=FALSE, out.width="87%", fig.align='center', fig.cap=""}
+```{r qcasteps, echo=FALSE, out.width="71%", fig.align='center', fig.cap=""}
 knitr::include_graphics("images/qca_process.png")
 ```
 
 ## Contribution {.scrollable}
 
-This study provides recipes of a “right-factors configuration” ... conducive for firms’ improvements by making business environment right. 
+This study may provide recipes of a [“right-factors configuration”]{style="color:green;"} ... conducive for firms’ improvements by making business environment right. 
 
 <br />
 
-Discussing such factors justifies why the results vary between countries and assists policymakers in addressing issues that might erode this substantial influence before conducting national development plans to promote private sector. 
+Mapping such factors justifies why the results vary between countries and assists policymakers in addressing issues that might erode this substantial influence before conducting national development plans to promote private sector. 
 
 ## Limitation
 
 - QCA itself + QR
-- Limitations in data availability exist for some variables.  
+- Limitations in data availability for some variables.  
 
 - Cross-section data
 
