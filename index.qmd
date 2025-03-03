@@ -11,7 +11,7 @@ format:
 
 ## Background {.scrollable}
 
-Economists and policymakers are interested in studying the potential determinants of economic growth.
+Economists and policymakers are interested in studying the potential determinants of economic growth. Firm growth and decline is at the core of economic dynamics, provides ["opportunity"]{style="color:green;"}, ["prosperity"]{style="color:green;"} ... employment, output and reducing poverty ... or ["disaster"]{style="color:red;"}.
 
 <br/>
 
@@ -19,26 +19,33 @@ Economists and policymakers are interested in studying the potential determinant
 
 ## Motivation
 
-To broaden the understanding of the determinants of firm growth. 
+<p style="text-align: center">To broaden the understanding of the determinants of firm growth...[recipes!]{style="color:red;"}</p>
 
 <br/>
 
-Firm growth and decline is at the core of economic dynamics, provides ["opportunity"]{style="color:green;"}, ["prosperity"]{style="color:green;"} ... employment and contribution to GDP ... or ["disaster"]{style="color:red;"}.
+## Southeast Asia {.scrollable}
 
-## Southeast Asia - the globe’s richest biologically {.scrollable}
+- Growth—and the drivers behind that growth—vary by economy and subregion.
+- The industrial landscape is dominated by small firms, which account for the bulk of output and employment
+- Significantly less productive and account for a smaller share of the productivity growth... aggregate productivity in these economies remains low.
+- Providing employment for a large proportion of less experienced and less educated workers belonging to the poorer households in urban and semi-urban areas. 
+- The determinants of small firm performance in developing countries remain less understood, with much of the earlier literature focusing on the large firms. 
 
-- Some countries have achieved enormous growth rates due to firm growth. 
-- The COGAD has identified five characteristics common to these 13 high-growth economies, including one factor thought to be especially crucial: a high rate of savings and investment (Spence, 2008) --- ini ke perusahaan.
-- The second circumstance inspiring this thesis is that the evidence remains inconclusive, as 
-confirmed by an in-depth review of the existing empirical literature, which is discussed in detail in Chapter 2.
-- Given the evident lack of consensus in the existing literature, it is imperative to 
-summarise this conflict...quote some studies.
+## The literature {.scrollable}
 
-## Thus
+The evidence remains inconclusive!!
 
-- From the results of this empirical literature, the influence of various factors on firm growth varies from one country to another...thus configurational.
+- Large firms, studies highlight factors like trade costs, lower Research and Development (R&D) spending and macro factors such as taxation and regulation.
+- Existing studies on small firms in developing countries, stress firm capabilities, access to external finance, favorable location and geographical factors and robust social and physical infrastructure. 
+- There are also studies which suggest that the development of the financial sector need not always be a pre-requisite for firm growth.
 
-- Three key factors have been studied extensively for their potential influence on firm growth.
+## Thus...configural?
+
+Given the evident lack of consensus in the existing literature, it is imperative to summarise this conflict as ...
+
+<br />
+
+[the influence of various factors on firm growth varies from one country to another...conditional and configural?]{style="color:green;"}
 
 ## Research agenda
 
@@ -46,50 +53,24 @@ Despite the difficulty imagining a modern economy without firm, the results of t
 
 <br />
 
-This variation of results prompts several questions about the conditions behind this and, most importantly, investigate the potential ["causes"]{style="color:blue;"} of firm growth.
+This variation of results prompts several questions about the conditions behind this and, most importantly, investigate the potential ["conditions"]{style="color:red;"} that cause firm growth.
 
+## Neoclassical economics {.scrollable}
 
+Neo-classical economics provides a framework for understanding firm growth and its determinants: 
 
-## Previous empirical works
+- **Profit Maximization**: **MR = MC** rule.
+- **Diminishing Returns**: the additional output produced from each additional unit of input will eventually decrease.
+- **Flexible Prices and Wages**: Prices and wages are adjusting to changes in supply and demand to maintain equilibrium in the market.
+- **Competitive Markets**: Firms operating in an environment close to perfect competition, where prices are determined by competitive pressures.
 
-With the availability of representative and comprehensive data sets --- much work has been done.
+## Determinants of firm growth {.scrollable}
 
-- Regressions: 
-  + The growth rate of a firm as *dependent variable*, 
-  + Attempts were made to explain this rate in terms of a long list of other variables.
-
-## Results
-
-Confirmed:
-
-  + The heterogeneity of firm
-  + Firm growth is highly idiosyncratic and difficult to predict
-  
-- Discovered empirical regularities: the growth rate distributions follow a "tent-shaped" pattern.
-
-## Neoclassical economics {.smaller}
-
-Neo-classical economics provides a framework for understanding firm growth and its determinants, focusing on several key principles:
-
-- Profit Maximization: ($MR$) = ($MC$) rule.
-
-- Diminishing Returns: the additional output produced from each additional unit of input will eventually decrease.
-
-- Flexible Prices and Wages: Prices and wages are adjusting to changes in supply and demand to maintain equilibrium in the market.
-
-- Competitive Markets: Firms operating in an environment close to perfect competition, where prices are determined by competitive pressures.
-
-## Determinants of Firm Growth {.smaller}
-
-- Capital Accumulation: Investment in physical capital, such as machinery and equipment, is a key driver of firm growth. Firms grow by increasing their capital stock, which enhances their production capacity.
-
-- Technological Progress: Technological advancements play a crucial role in firm growth by improving productivity and efficiency. Firms that adopt new technologies can produce more output with the same amount of inputs.
-
-- Labor: The quantity and quality of labor employed by firms are important determinants of growth. Firms grow by hiring more workers or by improving the skills and productivity of their existing workforce.
-
-- Market Conditions: The overall market environment, including demand for products and services, competition, and regulatory factors, influences firm growth. Firms that operate in favorable market conditions are more likely to grow.
-
-- Managerial Efficiency: Effective management and organizational practices contribute to firm growth by optimizing resource allocation and improving decision-making processes.
+- **Capital Accumulation**: Investment in physical capital, such as machinery and equipment enhances their production capacity.
+- **Technological Progress**: Technological advancements improve productivity and efficiency...so that firms that adopt new technologies can produce more output with the same amount of inputs.
+- **Labor**: The quantity and quality of labor...firms grow by hiring more workers or by improving the skills and productivity of their existing workforce.
+- **Market Conditions**: The overall market environment: demand for products and services, competition, and regulatory factors... firms that operate in favorable market conditions are more likely to grow.
+- **Managerial Efficiency**: Effective management and organizational practices ... optimize resource allocation and improving decision-making processes.
 
 ## Production Possibility Curve (PPC) {.smaller}
 
@@ -99,16 +80,14 @@ Neo-classical economics provides a framework for understanding firm growth and i
 - Growth requires conditions and specific types of resources and capabilities (firms are heterogeneous).
 - Firm growth requires flexibility to make changes in technology, workforce composition, product, location.
 
-## Criticisms of Neo-Classical Theory {.smaller}
+## Criticisms of Neo-Classical Theory {.scrollable}
 
 While neo-classical economics provides a useful framework for understanding firm growth, it has been criticized.
 
-- *The black-box* firm of equilibrium price theory with the famous MR=MC rule. 
-- MC is derived from production and cost function
-- MR is derived from demand function
-- In the neo-classical scheme, what inhibits further production expansion are the increasing costs resulting from increasing the production. 
+- The **black-box** firm of equilibrium price theory with the famous MR=MC rule. 
+- In the Neo-classical scheme, what inhibits further production expansion are the increasing costs resulting from increasing the production. 
 - Many managers report that in the real economy the black box is not controlled by the force of MC = MR, but by something more fundamental. Apparently it is not solely the marginal cost that makes firms to go into the standby position. 
-- Real firms: enact strategies, manage the creation and acquisition of information and knowledge, and that have internal organisational structures and processes.
+- Real firms: enact strategies, manage the creation and acquisition of information and knowledge, and have internal organisational structures and processes.
 
 ## Neoclassical economics +
 
@@ -128,8 +107,8 @@ Identity, internal structure and external boundaries (Hodgson, 2002)
 
 ## Quantity, quality and flexibility (K&L)
 
-- The quantity and quality of $K$ and $L$ is derived from $MRP_L$ and $MRP_K$ ... a techno-functional entity.
-- The flexibility in using $K$ and $L$ ... identity, internal structure and external boundaries...an institutional entity.
+- The quantity and quality of K and L is derived from $MRP_L$ and $MRP_K$ ... a techno-functional entity.
+- The flexibility in using K and L ... identity, internal structure and external boundaries...an institutional entity.
 
 ## Empirical barriers to business expansion {.smaller}
 
@@ -143,58 +122,59 @@ If we were to point out the strongest factors determining the obstacles, there w
 
 ## The message
 
-- A central message presented in this research is that in discussing firm growth requires **both** techno-functional and institutional foundations.
+- A central message presented in this research is that in discussing firm growth requires [both]{style="color:red;"} techno-functional and institutional foundations.
 - A firm as a techno-functional entity implies an ability to hire, buy and organise factors of production and contract for the sale of output. 
 - This hiring, buying, organising and contracting implies a pre-existing institutional structure covering, for instance, legal and accounting systems. 
-- Firm growth is a matter of degree/gradation
 
 ## The message
 
-- No universal status can be claimed for any particular theoretical perspective, i.e. a theoretical pluralism is required. 
+- No universal status can be claimed for any particular theoretical perspective, i.e. a theoretical [pluralism]{style="color:green;"} is required. 
 - A key issue here is that it is a fundamentally empirical question as to which perspective is relevant and dominant in particular conditions and circumstances. 
 - This empirically driven relevance opens up a significant, and open-ended, research agenda.
 
 ## Growth as a matter of degree
 
-- Firm growth can be seen as gradations of membership: stagnant, slow, fast, very fast.
-- If firm growth is thought to be a matter of degree, then fuzzy set theory claims that we can 
-meaningfully address the issue of how much the sets of firm that grow and conditions (such as financially constrained, size or age of firm) intersect. 
+- Firm growth can be seen as [gradations]{style="color:red;"} of membership: stagnant, slow, fast, very fast.
+- If firm growth is thought to be [a matter of degree]{style="color:red;"}, then fuzzy set theory claims that we can meaningfully address the issue of how much the sets of firm that grow and its conditions [(such as financially constrained, partly constrained, size, age of firm)]{style="color:green;"} intersect. 
 
 ## Fuzzy set
 
 - Consider that almost all social science theory is verbal and, as such, is formulated in terms of sets and set relations.
-- Researchers in the social sciences have long observed that although human beings break up their world into categories, they often use categories with blurred edges and gradations of membership. 
-- This is also true of many concepts employed in the social sciences such poverty, standard of living, financial development, economic growth and firm growth.
+- Researchers in the social sciences have long observed that although we break up things into categories, we often use categories with blurred edges and gradations of membership. 
+- This is also true of many concepts employed in economics such as poverty, standard of living, financial inclusion, economic growth and firm growth.
 
-## QCA {.scrollable}
+## QCA (Qualitative Comparative Analysis)
 
 - A phenomenon is studied as a combination of conditions that together produce an outcome.
 - The effect of a particular condition on outcome is never fixed, as it depends on the other condition that co-occur at that point in time.
-- The aim is to specify the causal recipe that is sufficient to explain the outcome of each case in a multiple case study.
+- The aim is to specify the causal [recipe]{style="color:red;"} that is sufficient to explain the outcome using Boolean logic.
 
-## Objectives
+## From QCA perspective
 
-This thesis examines the configuration of conditions that may promote or mitigate firm growth. Firms can operate in different condition and grow or they can operate in the same condition but do not grow. 
+There are configurations of conditions that may promote or mitigate firm growth. Firms can operate in different condition and grow or they can operate in the same condition but do not grow. 
 
 <br/>
 
-<p style="text-align: center">We take up the idea that the prevailing way for firm to grow is the outcome of the configuration of sets of conditions</p>.
+<p style="text-align: center">The prevailing way for firm to grow is the outcome of the configuration of sets of conditions</p>
 
-## Research Agenda {.scrollable}
+## Previous empirical works
 
-- To explore the degree to which firm heterogeneity (internal factors) and business environment (external factors) explain firm growth variability. 
-- To explore configurations of factors suspected to causally influence firm growth.
-- Little is known about how configurations among internal and external that foster or hinder growth.
+Much work has been done using representative and comprehensive data sets.
 
-## Empirical works
+- The growth rate of a firm as *dependent variable*, 
+- Attempts were made to explain this rate in terms of a long list of other variables.
+- Firm growth is highly idiosyncratic and difficult to predict
+- The growth rate distributions follow a "tent-shaped" pattern.
+
+## Previous empirical works
 
 - **Internal**: age, profit, productivity, investment, competition, owner, ownership structure, legal status, capital intensity, management structure.
 - **External**: an unsympathetic banking community, constricting government policies, tax and regulation, infrastructure, failures of business education. 
 
 ## Data
 
-- Main: World Bank Enterprise Survey [WBES](https://www.enterprisesurveys.org/en/enterprisesurveys)
-- 8 ASEAN members + Timor Leste (2009-2023)
+- Main: World Bank Enterprise Survey [WBES](https://www.enterprisesurveys.org/en/enterprisesurveys) +
+- ASEAN members (2009-2023)
 - Sampling stratification: firm size, location, business sector
 - Post stratification: gender of top manager, exporting status, ownership
 
@@ -208,7 +188,7 @@ This thesis examines the configuration of conditions that may promote or mitigat
 
 ## Conditions {.smaller}
 
-- [mgmt1] Management practices index 0-100 in from 2023
+- [mgmt1] Management practices index
 - [t7] Percent of firms that introduced a new product/service over last 3 years 
 - [t9] Percent of firms that introduced a process innovation over last 3 years 
 - [t10] Percent of firms that spend on R&D in the last fiscal years 
@@ -244,34 +224,19 @@ knitr::include_graphics("images/operationalisation.png")
 
 ## Contribution {.scrollable}
 
-This study provides insights into new ways of conceptualizing firms’ improvements in terms of making business environment right by implementing a “right-factors configuration,” a map of combinations of conditions.
+This study provides recipes of a “right-factors configuration” ... conducive for firms’ improvements by making business environment right. 
 
-## Aims
+<br />
 
-The key objective of this thesis is to provide a deeper understanding of the configurations of conditions for firm growth.
-
-In particular, this research aims to answer the following three research questions: 
-
-- Does a correlation exist between a more robust financial sector and stable long-term economic growth? 
-
-translate into equifinality, asymmetry, etc
-
-## Benefits/contribution
-
-Adding further empirical evidence to this nexus is quite essential; however, examining the factors that may erode or promote this relationship is more imperative. 
-
-Discussing such factors justifies why the results vary between countries and assists policymakers in addressing issues that might erode this substantial influence before conducting national development plans to promote the financial sector. 
-
-## Contribution
-
-This thesis builds on the literature by creating and refining a broad and up-to-date new database based on the availability of relevant data to assess the relationship between financial development and economic growth and adds further evidence regarding financial development effects on economic growth.
+Discussing such factors justifies why the results vary between countries and assists policymakers in addressing issues that might erode this substantial influence before conducting national development plans to promote private sector. 
 
 ## Limitation
 
-Like most literature, limitations in data availability exist for some variables, such as the financial sector depth and informal institution dataset. 
+Like most literature, limitations in data availability exist for some variables, such as  
 
-Despite these concerns, this thesis created and refined a broad and up-to-date new database based 
-on the availability of relevant data. 
+Cross-section data
+
+Longitudinal data
 
 ## References
 
