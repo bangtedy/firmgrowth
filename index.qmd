@@ -25,7 +25,7 @@ Economists and policymakers are interested in studying the potential determinant
 
 ## Southeast Asia {.scrollable}
 
-- Growth—and the drivers behind that growth—vary by economy and subregion.
+- Growth—and the drivers behind their growth—vary by economy and subregion.
 - The industrial landscape is dominated by small firms, which account for the bulk of output and employment
 - Significantly less productive and account for a smaller share of the productivity growth... aggregate productivity in these economies remains low.
 - Providing employment for a large proportion of less experienced and less educated workers belonging to the poorer households in urban and semi-urban areas. 
@@ -35,17 +35,17 @@ Economists and policymakers are interested in studying the potential determinant
 
 The evidence remains inconclusive!!
 
-- Large firms, studies highlight factors like trade costs, lower Research and Development (R&D) spending and macro factors such as taxation and regulation.
-- Existing studies on small firms in developing countries, stress firm capabilities, access to external finance, favorable location and geographical factors and robust social and physical infrastructure. 
+- For large firms, studies highlight factors like trade costs, lower Research and Development (R&D) spending and macro factors such as taxation and regulation.
+- For studies on small firms in developing countries, stress firm capabilities, access to external finance, favorable location and geographical factors and robust social and physical infrastructure. 
 - There are also studies which suggest that the development of the financial sector need not always be a pre-requisite for firm growth.
 
-## Thus...configural?
+## Thus...contextual and configural?
 
 Given the evident lack of consensus in the existing literature, it is imperative to summarise this conflict as ...
 
 <br />
 
-[the influence of various factors on firm growth varies from one country to another...conditional and configural?]{style="color:green;"}
+[the influence of various factors on firm growth varies from one country to another depends on the context and configuration?]{style="color:green;"}
 
 ## Research agenda
 
@@ -54,6 +54,11 @@ Despite the difficulty imagining a modern economy without firm, the results of t
 <br />
 
 This variation of results prompts several questions about the conditions behind this and, most importantly, investigate the potential ["conditions"]{style="color:red;"} that cause firm growth.
+
+## Research questions
+
+1. Which configurations of conditions are associated with firm growth?
+2. How do these configurations differ across firm contexts?
 
 ## Neoclassical economics {.scrollable}
 
@@ -97,11 +102,11 @@ While neo-classical economics provides a useful framework for understanding firm
 
 ## What is a firm?
 
-[**A techno-functional entity**]{style="color:blue;"}
+[**A techno-functional entity**]{style="color:green;"}
 
 As a black box that transforms factor inputs into outputs---how production and cost functions interact with demand on the market, i.e. the emphasis is on technical matters and how firms function in the context of the market.
 
-[**An institutional entity**]{style="color:blue;"}
+[**An institutional entity**]{style="color:green;"}
 
 Identity, internal structure and external boundaries (Hodgson, 2002)
 
@@ -122,40 +127,41 @@ If we were to point out the strongest factors determining the obstacles, there w
 
 ## The message
 
-- A central message presented in this research is that in discussing firm growth requires [both]{style="color:red;"} techno-functional and institutional foundations.
+A central message presented in this research is that in discussing firm growth requires [both]{style="color:red;"} techno-functional and institutional foundations.
+
 - A firm as a techno-functional entity implies an ability to hire, buy and organise factors of production and contract for the sale of output. 
 - This hiring, buying, organising and contracting implies a pre-existing institutional structure covering, for instance, legal and accounting systems. 
 
 ## The message
 
-- No universal status can be claimed for any particular theoretical perspective, i.e. a theoretical [pluralism]{style="color:green;"} is required. 
-- A key issue here is that it is a fundamentally empirical question as to which perspective is relevant and dominant in particular conditions and circumstances. 
+No universal status can be claimed for any particular theoretical perspective, i.e. a theoretical [pluralism]{style="color:green;"} is required. 
+
+- A key issue here is that it is a fundamentally empirical question as to which perspective is relevant and dominant in particular conditions and context. 
 - This empirically driven relevance opens up a significant, and open-ended, research agenda.
+
+## Fuzzy set
+
+- Researchers in the social sciences have long observed that although we break up things into categories, we often use categories with blurred edges and gradations of membership. 
+- This is also true of many concepts employed in economics such as poverty, standard of living, financial inclusion, economic growth and firm growth.
 
 ## Growth as a matter of degree
 
 - Firm growth can be seen as [gradations]{style="color:red;"} of membership: stagnant, slow, fast, very fast.
-- If firm growth is thought to be [a matter of degree]{style="color:red;"}, then fuzzy set theory claims that we can meaningfully address the issue of how much the sets of firm that grow and its conditions [(such as financially constrained, partly constrained, size, age of firm)]{style="color:green;"} intersect. 
-
-## Fuzzy set
-
-- Consider that almost all social science theory is verbal and, as such, is formulated in terms of sets and set relations.
-- Researchers in the social sciences have long observed that although we break up things into categories, we often use categories with blurred edges and gradations of membership. 
-- This is also true of many concepts employed in economics such as poverty, standard of living, financial inclusion, economic growth and firm growth.
+- If firm growth is thought to be [a matter of degree]{style="color:red;"}, then fuzzy set theory claims that we can meaningfully address the issue of how much the sets of firm that grow and its conditions [(such as financially constrained, partly constrained, size, age of firm)]{style="color:green;"} intersect.
 
 ## QCA (Qualitative Comparative Analysis)
 
 - A phenomenon is studied as a combination of conditions that together produce an outcome.
 - The effect of a particular condition on outcome is never fixed, as it depends on the other condition that co-occur at that point in time.
-- The aim is to specify the causal [recipe]{style="color:red;"} that is sufficient to explain the outcome using Boolean logic.
+- The aim is to specify the causal [recipe]{style="color:red;"} that is sufficient to explain the outcome using set theory and Boolean algebra.
 
-## From QCA perspective
+## Firm growth QCA perspective
 
-There are configurations of conditions that may promote or mitigate firm growth. Firms can operate in different condition and grow or they can operate in the same condition but do not grow. 
+Consider that almost all social science theory is verbal and, as such, is formulated in terms of sets and set relations.
 
-<br/>
+There are configurations of conditions that are associated with firm growth. Firms can operate in different condition and grow or they can operate in the same condition but do not grow. 
 
-<p style="text-align: center">The prevailing way for firm to grow is the outcome of the configuration of sets of conditions</p>
+The prevailing way for firm to grow is the outcome of the configuration of sets of conditions in certain context.
 
 ## Previous empirical works
 
@@ -175,8 +181,6 @@ Much work has been done using representative and comprehensive data sets.
 
 - Main: World Bank Enterprise Survey [WBES](https://www.enterprisesurveys.org/en/enterprisesurveys) +
 - ASEAN members (2009-2023)
-- Sampling stratification: firm size, location, business sector
-- Post stratification: gender of top manager, exporting status, ownership
 
 ## Outputs 
 
@@ -201,6 +205,16 @@ Much work has been done using representative and comprehensive data sets.
 - [hc] Percent of the population with a tertiary education, and e-skills
 - [dmd] Disposable income per capita relative to ASEAN average 
 
+## Context
+
+<br />
+
+Firm size, location, business sector (sampling stratification)
+
+<br />
+
+Gender of top manager, exporting status, ownership (post stratification)
+
 ## Conceptual Framework
 
 ```{r conceptual-frame, echo=FALSE, out.width="91%", fig.align='center', fig.cap=""}
@@ -222,6 +236,12 @@ knitr::include_graphics("images/configur.png")
 knitr::include_graphics("images/operationalisation.png")
 ```
 
+## Steps
+
+```{r qcasteps, echo=FALSE, out.width="87%", fig.align='center', fig.cap=""}
+knitr::include_graphics("images/qca_process.png")
+```
+
 ## Contribution {.scrollable}
 
 This study provides recipes of a “right-factors configuration” ... conducive for firms’ improvements by making business environment right. 
@@ -232,11 +252,12 @@ Discussing such factors justifies why the results vary between countries and ass
 
 ## Limitation
 
-Like most literature, limitations in data availability exist for some variables, such as  
+- QCA itself + QR
+- Limitations in data availability exist for some variables.  
 
-Cross-section data
+- Cross-section data
 
-Longitudinal data
+- Longitudinal data
 
 ## References
 
